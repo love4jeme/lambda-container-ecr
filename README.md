@@ -44,28 +44,28 @@ A secondary, smaller issue also came up during the final push: a `403 Forbidden`
 ## Verified Proof
 
 **ECR repository created**
-![ECR repository created](./screenshots/created-repo.png)
+![ECR repository created](./screenshots/ecr-repo-created.png)
 
 **Docker image built (first attempt, generic base image)**
-![Docker build output](./screenshots/building-docker-image.png)
+![Docker build output](./screenshots/docker-build.png)
 
 **Built image confirmed locally**
-![Docker images](./screenshots/created-docker-image.png)
-
-**First image pushed to ECR (later rejected by Lambda)**
-![First push](./screenshots/pushed-command.png)
+![Docker images](./screenshots/docker-images-list.png)
 
 **Image pushed to ECR — note the "Image Index" type, the OCI manifest wrapper Lambda rejected**
-![ECR images showing Image Index](./screenshots/image-in-ecr.png)
+![ECR images showing Image Index](./screenshots/ecr-images-list.png)
 
-**Final push — including the ECR token refresh (403 → re-login) and success, after rebuilding from the AWS Lambda base image**
+**Push command output, including the ECR token refresh (403 → re-login → success)**
+![Docker push with token refresh](./screenshots/docker-push-token-refresh.png)
+
+**Final successful push, after rebuilding from the AWS Lambda base image**
 ![Final successful push](./screenshots/successful-push.png)
 
 **Lambda function created successfully from the fixed image**
-![Lambda function created](./screenshots/lambda-function-test.png)
+![Lambda function created](./screenshots/lambda-function-created.png)
 
 **Test invocation succeeded — 200 response, 2.68ms execution**
-![Lambda test invocation succeeded](./screenshots/test-invocation.png)
+![Lambda test invocation succeeded](./screenshots/test-invocation-success.png)
 
 ---
 
